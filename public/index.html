@@ -3,104 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MRCX Studio</title>
-    <meta name="description" content="MRCX Studio is an independent game development studio based in Quebec, Canada.">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: #eee;
-            display: flex;
-            justify-content: center;
-        }
+    <meta
+        name="description"
+        content="Independent game development studio creating engaging digital experiences."
+    >
 
-        main {
-            width: 90%;
-            max-width: 760px;
-            padding: 80px 20px;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 50px;
-            font-size: 22px;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #bbb;
-        }
-
-        a {
-            color: #fff;
-        }
-
-        footer {
-            margin-top: 70px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            font-size: 14px;
-            color: #777;
-        }
-
-        footer a {
-            color: #aaa;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <main>
-        <h1>MRCX-Studio test</h1>
 
-        <p>
-            Independent game development studio based in Quebec, Canada.
-        </p>
+<header class="site-header">
+    <nav class="navbar">
 
-        <p>
-            We create accessible and engaging games for mobile.
-        </p>
+        <a href="index.html" class="brand">
 
-        <h2>About</h2>
+            <img
+                src="assets/images/company-logo.png"
+                alt="MRCX Studio"
+                class="brand-logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            >
 
-        <p>
-            MRCX Studio is an independent game studio focused on creating
-            polished gameplay experiences built around progression,
-            experimentation and replayability.
-        </p>
+            <span class="brand-name">
+                MRCX Studio
+            </span>
 
-        <p>
-            We believe in respecting our players. Our games are designed around
-            gameplay and user experience first, without intrusive or excessive
-            advertising. We want every interaction to add value to the experience,
-            not interrupt it.
-        </p>
+        </a>
 
-        <h2>Current Project</h2>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <p>
-            Our first title is currently in development for mobile platforms.
-            More information will be available closer to release.
-        </p>
+        <div class="nav-links" id="navLinks">
 
-        <h2>Contact</h2>
-
-        <p>
-            <a href="mailto:contact@mrcx-studio.com">
-                contact@mrcx-studio.com
+            <a href="index.html" class="active">
+                Home
             </a>
-        </p>
 
-        <footer>
-            © 2026 MRCX Studio ·
-            <a href="/privacy.html">Privacy Policy</a>
-        </footer>
-    </main>
+            <a href="download-empire.html">
+                Download Empire
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a href="support.html">
+                Support
+            </a>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <div class="hero-background">
+            <div class="data-line data-line-1"></div>
+            <div class="data-line data-line-2"></div>
+            <div class="data-line data-line-3"></div>
+        </div>
+
+        <div class="hero-content">
+
+            <p class="hero-eyebrow">
+                Independent Game Studio
+            </p>
+
+            <h1>
+                Games built around
+                <span>progression, systems and experimentation.</span>
+            </h1>
+
+            <p class="hero-description">
+                We create games focused on progression, strategy
+                and satisfying long-term growth.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="download-empire.html"
+                    class="button button-primary"
+                >
+                    Discover Download Empire
+                </a>
+
+                <a
+                    href="#studio"
+                    class="button button-secondary"
+                >
+                    About the studio
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="section reveal"
+        id="studio"
+    >
+
+        <div class="section-content">
+
+            <p class="section-label">
+                The Studio
+            </p>
+
+            <h2>
+                Built independently.
+            </h2>
+
+            <p class="section-text">
+                We are an independent game development studio focused
+                on creating accessible games with deep progression systems.
+            </p>
+
+            <p class="section-text">
+                Our goal is to build experiences that are easy to understand,
+                rewarding to master and enjoyable over the long term.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section game-highlight reveal">
+
+        <div class="game-card">
+
+            <div class="game-card-content">
+
+                <p class="section-label">
+                    Our First Game
+                </p>
+
+                <h2>
+                    Download Empire
+                </h2>
+
+                <p>
+                    Build your infrastructure, increase your download speed,
+                    research new technologies and grow from humble beginnings
+                    into a massive data empire.
+                </p>
+
+                <a
+                    href="download-empire.html"
+                    class="text-link"
+                >
+                    Explore Download Empire →
+                </a>
+
+            </div>
+
+            <div class="game-card-visual">
+
+                <div class="download-icon">
+                    ↓
+                </div>
+
+                <div class="speed-display">
+                    <span>Download Speed</span>
+                    <strong>∞ bps</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <span>
+            © 2026 MRCX Studio
+        </span>
+
+        <div class="footer-links">
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a href="support.html">
+                Support
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
