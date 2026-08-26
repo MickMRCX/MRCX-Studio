@@ -4,99 +4,386 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Download Empire - Support</title>
+    <meta
+        name="description"
+        content="Contact MRCX Studio for support with Download Empire."
+    >
 
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background: #111827;
-            color: #f3f4f6;
-        }
+    <title>Support - MRCX Studio</title>
 
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 80px 24px;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 8px;
-        }
-
-        h2 {
-            margin-top: 40px;
-            font-size: 22px;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #d1d5db;
-        }
-
-        a {
-            color: #60a5fa;
-        }
-
-        .contact {
-            margin-top: 24px;
-            padding: 20px;
-            background: #1f2937;
-            border-radius: 12px;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #374151;
-            font-size: 14px;
-            color: #9ca3af;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <main class="container">
+<header class="site-header">
+    <nav class="navbar">
 
-        <h1>Download Empire Support</h1>
+        <a href="index.html" class="brand">
 
-        <p>
-            Need help with Download Empire?
-        </p>
+            <img
+                src="assets/images/company-logo.png"
+                alt="MRCX Studio"
+                class="brand-logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            >
 
-        <p>
-            If you encounter a problem, have a question, or would like
-            to report a bug, you can contact MRCX Studio by email.
-        </p>
+            <span class="brand-name">
+                MRCX Studio
+            </span>
 
-        <div class="contact">
-            <strong>Contact Support</strong>
+        </a>
 
-            <p>
-                <a href="mailto:contact@mrcx-studio.com">
-                    contact@mrcx-studio.com
-                </a>
-            </p>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="download-empire.html">
+                Download Empire
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a href="support.html" class="active">
+                Support
+            </a>
+
         </div>
 
-        <h2>Reporting a problem</h2>
+    </nav>
+</header>
 
-        <p>
-            When reporting an issue, please include your device model,
-            iOS version, and a short description of the problem.
-        </p>
 
-        <p>
-            This information will help us investigate the issue more quickly.
-        </p>
+<main>
 
-        <footer>
-            © 2026 MRCX Studio. All rights reserved.
-        </footer>
+    <section class="support-hero">
 
-    </main>
+        <div class="hero-background">
+            <div class="data-line data-line-1"></div>
+            <div class="data-line data-line-2"></div>
+            <div class="data-line data-line-3"></div>
+        </div>
+
+        <div class="support-hero-content">
+
+            <p class="hero-eyebrow">
+                Support
+            </p>
+
+            <h1>
+                How can we help?
+            </h1>
+
+            <p class="hero-description">
+                Have a question, found a bug, or need help with
+                Download Empire? Send us a message.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="support-section reveal">
+
+        <div class="support-layout">
+
+            <div class="support-info">
+
+                <p class="section-label">
+                    Contact MRCX Studio
+                </p>
+
+                <h2>
+                    Get in touch.
+                </h2>
+
+                <p>
+                    Use the form to contact us about Download Empire,
+                    technical issues, purchases, feedback or general questions.
+                </p>
+
+                <div class="support-email">
+
+                    <span>
+                        You can also contact us directly:
+                    </span>
+
+                    <a href="mailto:contact@mrcx-studio.com">
+                        contact@mrcx-studio.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="support-form-container">
+
+                <form
+                    class="support-form"
+                    id="supportForm"
+                    action="support.php"
+                    method="post"
+                >
+
+                    <div class="form-field">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            maxlength="100"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            maxlength="254"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <select
+                            id="subject"
+                            name="subject"
+                            required
+                        >
+
+                            <option value="">
+                                Choose a subject
+                            </option>
+
+                            <option value="Technical Support">
+                                Technical Support
+                            </option>
+
+                            <option value="Bug Report">
+                                Bug Report
+                            </option>
+
+                            <option value="Purchase">
+                                Purchase
+                            </option>
+
+                            <option value="Feedback">
+                                Feedback
+                            </option>
+
+                            <option value="General Question">
+                                General Question
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="8"
+                            maxlength="5000"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div
+                        class="website-field"
+                        aria-hidden="true"
+                    >
+
+                        <label for="website">
+                            Website
+                        </label>
+
+                        <input
+                            type="text"
+                            id="website"
+                            name="website"
+                            tabindex="-1"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="button button-primary support-submit"
+                    >
+                        Send Message
+                    </button>
+
+
+                    <div
+                        class="form-status"
+                        id="formStatus"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <span>
+            © 2026 MRCX Studio
+        </span>
+
+        <div class="footer-links">
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a href="support.html">
+                Support
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="assets/js/main.js"></script>
+
+<script>
+const supportForm =
+    document.getElementById("supportForm");
+
+const formStatus =
+    document.getElementById("formStatus");
+
+
+if (supportForm && formStatus)
+{
+    supportForm.addEventListener(
+        "submit",
+        async event =>
+        {
+            event.preventDefault();
+
+            const submitButton =
+                supportForm.querySelector(
+                    ".support-submit"
+                );
+
+            submitButton.disabled = true;
+
+            formStatus.className =
+                "form-status";
+
+            formStatus.textContent =
+                "Sending...";
+
+            try
+            {
+                const response =
+                    await fetch(
+                        supportForm.action,
+                        {
+                            method: "POST",
+                            body: new FormData(
+                                supportForm
+                            )
+                        }
+                    );
+
+                const result =
+                    await response.json();
+
+                if (!response.ok)
+                {
+                    throw new Error(
+                        result.message ||
+                        "Unable to send message."
+                    );
+                }
+
+                formStatus.className =
+                    "form-status success";
+
+                formStatus.textContent =
+                    result.message;
+
+                supportForm.reset();
+            }
+            catch (error)
+            {
+                formStatus.className =
+                    "form-status error";
+
+                formStatus.textContent =
+                    error.message;
+            }
+            finally
+            {
+                submitButton.disabled = false;
+            }
+        }
+    );
+}
+</script>
 
 </body>
 </html>
