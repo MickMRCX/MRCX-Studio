@@ -1690,3 +1690,23 @@ a {
     }
 
 }
+
+.store-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.store-buttons a {
+    display: inline-flex;
+}
+
+.store-badge {
+    display: block;
+    width: auto;
+    height: 56px;
+    max-width: 100%;
+}
