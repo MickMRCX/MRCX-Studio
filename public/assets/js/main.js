@@ -11,7 +11,8 @@ if (menuToggle && navLinks)
         "click",
         () =>
         {
-            navLinks.classList.toggle("open");
+            const open = navLinks.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(open));
         }
     );
 }
@@ -46,6 +47,7 @@ document
     .forEach(
         element =>
         {
+            element.classList.add("reveal-pending");
             observer.observe(
                 element
             );

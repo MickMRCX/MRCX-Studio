@@ -1,4 +1,10 @@
 RewriteEngine On
+
+# Match original requests so directory index resolution cannot loop.
+RewriteCond %{THE_REQUEST} \s/+privacy\.html(?:[?\s]) [NC]
+RewriteRule ^privacy\.html$ https://mrcx-studio.com/download-empire/privacy.html [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+download-empire\.html(?:[?\s]) [NC]
+RewriteRule ^download-empire\.html$ https://mrcx-studio.com/download-empire/ [R=301,L]
+
 RewriteCond %{ENV:HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-

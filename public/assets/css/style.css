@@ -1710,3 +1710,38 @@ a {
     height: 56px;
     max-width: 100%;
 }
+/* Keep longer game names and both privacy links usable on small screens. */
+.footer-links {
+    flex-wrap: wrap;
+}
+
+.game-hero h1 {
+    overflow-wrap: anywhere;
+}
+
+.store-placeholder {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .game-hero h1 {
+        font-size: clamp(2.5rem, 10vw, 5rem);
+    }
+}
+
+/* Reveal effects enhance content without hiding it when JavaScript is off. */
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.reveal-pending {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal-pending.visible {
+    opacity: 1;
+    transform: none;
+}
