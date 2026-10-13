@@ -17,7 +17,7 @@ Les références à l'ancienne politique dans les pages du dépôt ont été mis
 
 ## Audit Tactical Command Idle, 12 octobre 2026
 
-Lecture seule de `/Users/pascal/Projects/Project-Breach`. Aucun fichier Unity modifié. Cet audit décrit le code local, pas un binaire de production ni la configuration distante des tableaux de bord.
+Lecture seule de `/Users/pascal/Projects/Project-Breach`. Aucun fichier Unity modifié. Cet audit décrit le code local, pas un binaire de production ni la configuration distante des tableaux de bord. Mise à jour : le manifest fourni ensuite par le développeur remplace le constat initial pour les dépendances directes. Il conserve Analytics 6.3.0, IAP 5.4.3 et Mobile Notifications 2.4.3 et ne déclare plus LevelPlay ni aucun SDK publicitaire. Les observations de code et de réglages ci-dessous proviennent de l’audit initial; le nouveau manifest ne suffit pas à les revalider.
 
 | Élément | Preuve et constat |
 | --- | --- |
@@ -29,14 +29,14 @@ Lecture seule de `/Users/pascal/Projects/Project-Breach`. Aucun fichier Unity mo
 | Unity Mobile Notifications 2.4.3 | `Notifications/*`: notifications locales de missions/bâtiments et préférences sur l'appareil. |
 | Diagnostics | `ProjectSettings/UnityConnectSettings.asset`: Cloud Diagnostics reporting désactivé, engine diagnostics activé. `ProjectSettings.asset`: crash-report API désactivée. Événements techniques personnalisés via Analytics. Confirmer les transmissions moteur en build. |
 | Authentication / Cloud Save | Pas de package ni d'intégration correspondante trouvés dans les manifestes et scripts examinés. Cela ne garantit pas l'absence de toute sauvegarde distante ou sauvegarde système dans la version finale. |
-| Dépendances publicitaires restantes | `com.unity.services.levelplay` 9.5.1 dans le manifeste; `Assets/LevelPlay/Editor/IronSourceSDKDependencies.xml` et `ISUnityAdsAdapterDependencies.xml` déclarent ironSource et l'adaptateur Unity Ads Android/iOS. À retirer du projet et des dépendances natives avant release, dans une tâche Unity distincte. |
+| Dépendances publicitaires | LevelPlay absent du manifest actualisé fourni. L’audit initial avait trouvé LevelPlay 9.5.1 ainsi que `Assets/LevelPlay/Editor/IronSourceSDKDependencies.xml` et `ISUnityAdsAdapterDependencies.xml`. Leur suppression et l’absence de dépendances natives publicitaires dans les builds restent à vérifier; le manifest seul ne les établit pas. |
 | AdMob / UMP | Aucune intégration correspondante trouvée dans les recherches de scripts et fichiers de dépendances examinés. À revérifier dans les binaires finaux. |
 
 La politique du nouveau jeu n'affirme pas que le projet actuel est exempt de SDK publicitaires. Elle décrit l'objectif de release sans publicité et signale la vérification encore nécessaire; aucune déclaration d'utilisation de services publicitaires, de publicité personnalisée ou d'annonces récompensées n'est transférée.
 
 ## Informations à confirmer avant publication
 
-1. Retirer les SDK publicitaires, adaptateurs, dépendances Android/iOS et références inutilisées; inspecter les binaires et transmissions réseau.
+1. Le manifest actualisé ne déclare plus de SDK publicitaire. Vérifier également `packages-lock.json`, les anciens adaptateurs, dépendances Android/iOS et références inutilisées; retirer tout résidu et inspecter les binaires et transmissions réseau.
 2. Vérifier les payloads automatiques Analytics (identifiants, IP, données techniques), les schémas Dashboard, les choix de consentement et l'arrêt effectif de collecte après retrait.
 3. Confirmer les diagnostics moteur et crash reporting en build, leurs données, destinataires et contrôles.
 4. Décider si les achats sont actifs au lancement; finaliser et auditer le validateur de reçus, ses prestataires, transmissions et stockage. Vérifier l'accès éventuel aux données de paiement sans inventer une garantie.
