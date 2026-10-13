@@ -74,3 +74,15 @@ Modifiés : `public/index.html`, `public/support.html`, `public/privacy.html`, `
 - `git diff --check`: valide.
 - Styles responsive existants conservés; titre long adapté aux petits écrans, liens de pied de page repliables, état ARIA du menu synchronisé. Contenu visible sans JavaScript.
 - Limite: Chrome headless a planté au démarrage dans l'environnement local; validation visuelle mobile/ordinateur et interactions menu/carrousel restent à réaliser dans un navigateur. Node local ne démarre pas (bibliothèque ICU manquante). Aucun envoi du formulaire de support, déploiement, modification de store ou projet Unity effectué.
+
+## Vérification complémentaire du dépôt actuel
+
+Nouvelle lecture des manifestes, scripts, scène BootScene et ProjectSettings après nettoyage publicitaire : LevelPlay absent du manifeste et du lock; dossiers Assets/LevelPlay et Assets/Plugins absents; aucune référence LevelPlay, ironSource, AdMob ou UMP trouvée dans les fichiers examinés. UGS Core confirmé dans le lock. Le lien des paramètres ouvre la politique Tactical Command Idle.
+
+`BootScene.unity` ne référence aucun validateur de reçus; le code IAP exige ce validateur pour permettre les achats. Aucun appel `RequestDataDeletion` trouvé dans les scripts. Cloud Diagnostics reporting reste désactivé, mais `enableCrashReportAPI` est désormais à 1 et engine diagnostics reste activé : l’ancien constat de crash API désactivée est remplacé par celui-ci. Les transmissions réelles doivent être testées dans les builds.
+
+La page précise désormais le défaut fournisseur de 13 mois documenté par Unity pour les données personnelles Analytics, sans le présenter comme une durée configurée et vérifiée pour le jeu. Public visé, activation des achats, réglages distants de conservation et gestion des demandes restent à confirmer. Aucun accès aux consoles Unity/Apple/Google ni test réseau d’un binaire final réalisé.
+
+## Public visé confirmé par la capture Google Play Console
+
+La capture fournie par le développeur indique les tranches 13–15, 16–17 et 18 ans et plus dans « Cible et contenu ». La politique décrit donc un public visé de 13 ans et plus, excluant les moins de 13 ans du public cible. Les classifications de contenu régionales sont distinctes de ce choix. Cette capture ne prouve ni une vérification d’âge dans le jeu, ni la mise en place de mesures de consentement parental. Les mesures applicables aux mineurs de 13–17 ans et la configuration App Store restent à confirmer. Ce constat remplace le point antérieur « public visé à confirmer ».
