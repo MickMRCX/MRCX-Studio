@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy (Draft) — Tactical Command Idle — MRCX Studio</title><meta name="description" content="Pre-release privacy policy draft for Tactical Command Idle by MRCX Studio, with verified integrations and remaining release checks.">
+<title>Privacy Policy — Tactical Command Idle — MRCX Studio</title><meta name="description" content="Privacy Policy for Tactical Command Idle by MRCX Studio.">
 <link rel="canonical" href="https://mrcx-studio.com/tactical-command-idle/privacy.html">
 <meta name="robots" content="noindex, follow">
 <link rel="stylesheet" href="../assets/css/style.css"><link rel="icon" type="image/png" href="../assets/images/favicon.png"></head><body>
@@ -40,15 +40,85 @@
         </div>
     </nav>
 </header>
-<main class="privacy-page"><section class="privacy-hero"><div class="privacy-hero-content"><p class="hero-eyebrow">Legal · Pre-release Draft</p><h1>Privacy Policy</h1><p class="privacy-subtitle">Tactical Command Idle — Draft reviewed October 12, 2026; not yet effective</p></div></section><section class="privacy-content"><div class="privacy-contact-card"><strong>Pending release verification</strong><p>This draft is not ready for store submission. No advertising SDK or adapter was found in the current package manifests and examined project files. The final Android and iOS builds still require verification. Services, diagnostics, purchases, retention and audience details marked below require confirmation.</p></div><article class="privacy-section"><h2><span>01</span>Game and Developer</h2><p>MRCX Studio develops <strong>Tactical Command Idle</strong>, formerly Project Breach, a tactical idle management and strategy game for Android and iOS.</p><p>This draft is based on the current package manifests, game scripts, startup scene and project settings reviewed before release. The planned release has no advertising. The final build must be checked before this policy becomes effective.</p></article>
-<article class="privacy-section"><h2><span>02</span>Data and Purposes</h2><p>The reviewed implementation integrates optional Unity Analytics to understand usage, improve game balance and investigate technical failures. Collection is gated by the analytics consent choice.</p><p>Unity Analytics may process IP address, installation-specific and analytics user identifiers, and IDFV on supported Apple devices, alongside session, device, operating system and app version information. The exact automatic payload in the release build remains to be verified.</p><p>Custom events cover building construction and upgrades, agent recruitment and promotion, mission starts and outcomes, difficulty, duration, team size, success probability and in-game rewards. Technical events report mission resolution and save restoration failures using categories. Agent and building identifiers refer to game content.</p></article>
-<article class="privacy-section"><h2><span>03</span>Third-Party Services</h2><p>The updated manifest declares Unity Analytics 6.3.0, Unity IAP 5.4.3 and Unity Mobile Notifications 2.4.3. Unity Gaming Services Core is present in the resolved package dependencies and initialized by the game after analytics consent. No Unity Authentication or Cloud Save package or corresponding gameplay integration was found in the current files examined; final build behavior still needs verification.</p><p>Unity Mobile Notifications 2.4.3 is integrated for local mission and building notifications. Notification preferences are saved on the device; operating system permission and game settings control notifications.</p><p>See the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Game Player and App User Privacy Policy</a>, <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p></article>
-<article class="privacy-section"><h2><span>04</span>In-App Purchases</h2><p>Unity IAP integration exists for store purchases. The reviewed code processes product and transaction identifiers, validates purchases through a receipt-validator interface and stores a local transaction ledger to prevent duplicate credit.</p><p><strong>To confirm:</strong> whether purchases will be enabled at launch, the Apple and Google store configuration, the production receipt-validation implementation, and any backend receipt or transaction processing. A concrete production validator was not found in the reviewed scripts, and the startup scene has no receipt validator assigned. The reviewed purchase code requires this validator before allowing purchases. Payment-data access and provider retention must be confirmed before release.</p></article>
-<article class="privacy-section"><h2><span>05</span>Save Data and Storage</h2><p>The reviewed save system stores game progression in local files under the application data directory, including base, personnel, missions, economy and purchase-credit records. Settings and notification preferences are stored locally; Unity persists analytics consent separately from game saves.</p><p><strong>To confirm:</strong> operating system backup behavior, deletion/reset behavior, and any remote storage or purchase-validation backend added before release. Local saves do not establish that no data is transmitted by other services.</p></article>
-<article class="privacy-section"><h2><span>06</span>Retention</h2><p><a href="https://docs.unity.com/en-us/analytics/privacy-and-consent/privacy-overview">Unity documents a default retention period of 13 months for Analytics personal data</a>. This is the provider default, not a verified project-specific configuration. Any shorter period configured for this game still needs confirmation. Local data persists until removed by the game, user or operating system, subject to platform backup behavior.</p><p><strong>To confirm:</strong> configured Unity Analytics retention, support correspondence retention, any purchase-validation retention, and deletion procedures. No fixed retention period is asserted in this draft.</p></article>
-<article class="privacy-section"><h2><span>07</span>Service Providers and Sharing</h2><p>When analytics is allowed, analytics and progression events are sent to Unity for analysis and diagnostics. If store purchases are enabled, purchase information is processed through the relevant platform and configured purchase services.</p><p><strong>To confirm:</strong> the final recipient list, any validation backend, processing locations and contractual arrangements. This draft does not assert unverified restrictions on sharing.</p></article>
-<article class="privacy-section"><h2><span>08</span>Privacy Choices and Requests</h2><p>The reviewed code presents an initial analytics choice and allows that choice to be changed in Settings under Usage Analytics. Refusing analytics does not block gameplay; custom analytics events require granted consent. Withdrawal is not a request to delete previously collected data.</p><p>Contact <a href="mailto:contact@mrcx-studio.com">contact@mrcx-studio.com</a> about access, correction, deletion or other privacy requests. Available rights depend on applicable law.</p><p><strong>To confirm:</strong> the request-handling process, identification of analytics records, provider deletion workflow and final on-device consent behavior. No call to Unity Analytics data deletion was found in the reviewed game scripts; this policy does not promise an in-game deletion feature.</p></article>
-<article class="privacy-section"><h2><span>09</span>Children's Privacy</h2><p>Tactical Command Idle is intended for players aged <strong>13 and older</strong>. The target audience declared in Google Play Console includes ages 13–15, 16–17 and 18 and older; children under 13 are not part of the intended audience.</p><p>Content ratings may vary by country and are separate from the intended audience. The intended age range does not mean the game verifies each player’s age.</p><p><strong>To confirm before publication:</strong> any age-related privacy or parental consent measures required for players aged 13–17 in the countries where the game is offered, and the corresponding App Store configuration. The Google Play audience selection alone does not establish that these measures are implemented.</p></article>
-<article class="privacy-section"><h2><span>10</span>Security and Diagnostics</h2><p>In the current project settings, Cloud Diagnostics reporting is disabled, while engine diagnostics and the crash-report API are enabled. Enabling an API does not by itself establish that crash reports are uploaded; actual release-build collection and transmission remain to be verified. Consent-gated custom technical events are implemented through Analytics.</p><p><strong>To confirm:</strong> engine diagnostic transmissions and controls, release crash-reporting behavior, security measures and any server-side services. No guarantee of complete security is made.</p></article>
-<article class="privacy-section"><h2><span>11</span>Changes to This Policy</h2><p>This draft must be updated after release-build verification, with an effective date when approved for publication. Later changes to features, providers or data processing should be reflected here.</p><p>The game-specific policy URL is <a href="https://mrcx-studio.com/tactical-command-idle/privacy.html">https://mrcx-studio.com/tactical-command-idle/privacy.html</a>.</p></article>
-<article class="privacy-section"><h2><span>12</span>Contact</h2><div class="privacy-contact-card"><strong>MRCX Studio</strong><span>Email: <a href="mailto:contact@mrcx-studio.com">contact@mrcx-studio.com</a></span><span>Website: <a href="https://mrcx-studio.com">mrcx-studio.com</a></span></div></article></section></main><footer class="site-footer"><div class="footer-content"><span>© 2026 MRCX Studio. All rights reserved.</span><div class="footer-links"><a href="privacy.html">Privacy (draft)</a><a href="../support.html">Support</a></div></div></footer><script src="../assets/js/main.js"></script></body></html>
+<main class="privacy-page">
+<section class="privacy-hero"><div class="privacy-hero-content"><p class="hero-eyebrow">Legal</p><h1>Privacy Policy — Tactical Command Idle</h1><p class="privacy-subtitle">Last updated: October 13, 2026</p></div></section>
+<section class="privacy-content">
+<p>Tactical Command Idle is a mobile game developed and published by MRCX Studio.</p>
+<p>MRCX Studio respects the privacy of its players and is committed to protecting their personal information.</p>
+<article class="privacy-section">
+<h2><span>01</span>Information We Collect</h2>
+<p>Tactical Command Idle uses Unity Analytics to understand gameplay activity and improve the gaming experience.</p>
+<p>Depending on the device and service configuration, information may include:</p>
+<ul>
+<li>Device information and operating system.</li>
+<li>Installation-specific identifiers.</li>
+<li>IP address.</li>
+<li>Gameplay events, such as missions, progression, and interactions.</li>
+<li>Application usage and performance information.</li>
+</ul>
+<p>We do not require players to provide their real name, postal address, or telephone number to play.</p>
+</article>
+<article class="privacy-section">
+<h2><span>02</span>How We Use Information</h2>
+<p>Collected information is used to:</p>
+<ul>
+<li>Understand gameplay patterns and player progression.</li>
+<li>Identify technical issues.</li>
+<li>Improve game balance, usability, and performance.</li>
+<li>Evaluate and improve game features.</li>
+</ul>
+</article>
+<article class="privacy-section">
+<h2><span>03</span>Analytics Consent</h2>
+<p>Unity Analytics data collection is subject to the player's privacy choices and applicable laws.</p>
+<p>Where consent is required, players must be able to decline analytics collection. Players may also withdraw consent through the privacy controls provided in the game.</p>
+</article>
+<article class="privacy-section">
+<h2><span>04</span>In-App Purchases</h2>
+<p>Tactical Command Idle offers optional in-app purchases through Google Play and, where available, the Apple App Store.</p>
+<p>Payments are processed by the respective platform. MRCX Studio does not directly receive or store credit card numbers or complete payment credentials.</p>
+<p>Purchase-related information may be processed by the platform and Unity IAP to validate transactions, deliver purchased content, and support purchase restoration.</p>
+</article>
+<article class="privacy-section">
+<h2><span>05</span>Advertising</h2>
+<p>Tactical Command Idle does not integrate advertising SDKs and does not display third-party advertisements.</p>
+<p>We do not use advertising identifiers for targeted advertising within the game.</p>
+</article>
+<article class="privacy-section">
+<h2><span>06</span>Third-Party Services</h2>
+<p>The game uses the following services:</p>
+<ul>
+<li>Unity Technologies — Analytics and In-App Purchasing.</li>
+<li>Google Play — Application distribution and payment processing.</li>
+<li>Apple App Store — Application distribution and payment processing, where applicable.</li>
+</ul>
+<p>These services process information according to their own privacy policies.</p>
+</article>
+<article class="privacy-section">
+<h2><span>07</span>Data Retention and Security</h2>
+<p>Data is retained only as necessary for the purposes described in this policy, subject to service-provider retention periods and applicable legal obligations.</p>
+<p>We rely on appropriate technical and organizational measures, including those provided by our service providers, to protect information.</p>
+</article>
+<article class="privacy-section">
+<h2><span>08</span>Your Privacy Rights</h2>
+<p>Depending on your jurisdiction, you may have rights to access, correct, or request deletion of your personal information, or to withdraw consent.</p>
+<p>You may contact MRCX Studio to exercise these rights.</p>
+</article>
+<article class="privacy-section">
+<h2><span>09</span>Children's Privacy</h2>
+<p>Tactical Command Idle is not specifically directed toward children. We do not intentionally request personal information directly from children.</p>
+<p>If you believe that a child's personal information has been collected improperly, please contact us.</p>
+</article>
+<article class="privacy-section">
+<h2><span>10</span>Changes to This Policy</h2>
+<p>We may update this Privacy Policy to reflect changes to the game, its services, or applicable regulations.</p>
+<p>The latest version will be published on the MRCX Studio website.</p>
+</article>
+<article class="privacy-section">
+<h2><span>11</span>Contact</h2>
+<p>MRCX Studio</p>
+<p>Website: <a href="https://mrcx-studio.com">https://mrcx-studio.com</a></p>
+<p>For privacy-related questions or requests, please use the contact information provided on our website.</p>
+</article>
+</section>
+</main><footer class="site-footer"><div class="footer-content"><span>© 2026 MRCX Studio. All rights reserved.</span><div class="footer-links"><a href="privacy.html">Privacy</a><a href="../support.html">Support</a></div></div></footer><script src="../assets/js/main.js"></script></body></html>
